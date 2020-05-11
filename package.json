@@ -1,0 +1,26 @@
+{
+  "name": "myfirsthapiapi",
+  "version": "1.0.0",
+  "description": "web server and testing env",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pfesenmeier/super-duper-invention.git"
+  },
+  "keywords": [
+    "javascript",
+    "hapi"
+  ],
+  "author": "Paul Fesenmeier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pfesenmeier/super-duper-invention/issues"
+  },
+  "homepage": "https://github.com/pfesenmeier/super-duper-invention#readme",
+  "dependencies": {
+    "@hapi/hapi": "^19.1.1"
+  }
+}
