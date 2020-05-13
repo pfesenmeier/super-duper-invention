@@ -2,9 +2,15 @@ const Code = require('@hapi/code');
 const Lab = require('@hapi/lab');
 
 const { expect } = Code;
-const { it } = exports.lab = Lab.script();
+const { after, before, describe, it } = exports.lab = Lab.script();
 
-it('returns true when 1 + 1 equals 2', () => {
+describe('index route', () => {
 
-    expect(1 + 1).to.equal(3);
-})
+  before(() => {});
+
+  after(() => {} );
+
+  it('returns true when 1 + 1 equals 2', () => {
+      expect(1+1).to.equal(2);
+  });
+});

@@ -1,0 +1,17 @@
+/* New Javascript Syntax */
+
+Object.create(o) // create object that inherits from o
+function f() {return 42;}
+var g = new f(); // create function that inherits from other function
+
+Object.isPrototypeOf()
+
+chaining with new vs create
+
+Object.create --> prototype of object is first argument of the function
+   prototype is the thing you called function on (created instance of)
+
+new --> prototype is prototype of the thing you inherited. (made a copy of)
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+   with the class keyword
