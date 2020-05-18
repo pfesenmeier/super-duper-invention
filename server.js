@@ -2,7 +2,7 @@
 
 const Hapi = require('@hapi/hapi');
 
-const init = async () => {
+module.exports = async function init() {
 
   const server = Hapi.server({
     port: 3000,
@@ -18,6 +18,7 @@ const init = async () => {
 
   });
 
+module.exports = async function start() {
   await server.start();
   console.log('Server running on %s', server.info.uri);
 };
