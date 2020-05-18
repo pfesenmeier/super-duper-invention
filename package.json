@@ -4,7 +4,7 @@
   "description": "web server and testing env",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "lab test"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/pfesenmeier/super-duper-invention#readme",
   "dependencies": {
-    "@hapi/hapi": "^19.1.1",
+    "@hapi/hapi": "18.4.1",
     "latest": "^0.2.0",
     "@hapi/lab": ">=19.0.0",
     "@hapi/code": "5.3.1"
