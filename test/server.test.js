@@ -2,17 +2,27 @@
 
 const Code = require('@hapi/code');
 const Lab = require('@hapi/lab');
-const { init, stop } = require('../server');
+const { init } = require('../server');
 const { expect } = Code;
-const { after, before, describe, it } = exports.lab = Lab.script();
+const { afterEach, beforeEach, describe, it } = exports.lab = Lab.script();
 
 describe('index route', () => {
+  
   let server;
-  before(server = await init());
+  
+  beforeEach(async() => {
+    server = await init();
+  });
 
-  after(server.stop());
+  afterEach(async() => { 
+    await server.stop() 
+  });
 
-  it('returns true when 1 + 1 equals 2', () => {
-      expect(1+1).to.equal(2);
+  it('responds with a 200', async() => {
+    const res = await server.inject({
+      method: 'get',
+      url: '/'
+    });
+    expect(res.statusCode).to.equal(200);
   });
 });

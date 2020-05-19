@@ -1,13 +1,12 @@
 'use strict';
 
-
-
 const Hapi = require('@hapi/hapi');
 
 const server = Hapi.server({
   port: 3000,
   host: 'localhost'
 });
+
 server.route({
   method: 'GET',
   path: '/',
@@ -29,7 +28,7 @@ exports.start = async() => {
   return server;
 }
 
-proccess.on('Unhandled Rejection', (err) => {
+process.on('Unhandled Rejection', (err) => {
   console.log(err);
-  proccess.exit(1);
+  process.exit(1);
 })
