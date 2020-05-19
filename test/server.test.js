@@ -26,3 +26,23 @@ describe('index route', () => {
     expect(res.statusCode).to.equal(200);
   });
 });
+
+describe('POST /temperature', () => {
+
+  let server;
+
+  beforeEach(async() => {
+    server = await init();
+  });
+
+  afterEach(async() => {
+    await server.stop();
+  });
+
+  it('accepts a properly formed request', async() => {
+    const res = await server.inject({
+      method: 'post',
+      url: 'temperature'
+    });
+  });
+});
